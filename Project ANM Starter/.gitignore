@@ -1,8 +1,6 @@
 
-# Created by https://www.gitignore.io/api/MY_API_NAME
-# Edit at https://www.gitignore.io/?templates=MY_API_NAME
-
-#!! ERROR: my_api_name is undefined. Use list command to see defined gitignore types !!#
-
-# End of https://www.gitignore.io/api/MY_API_NAME
 node_modules
+build
+npm-debug.log
+.env
+.DS_Store
