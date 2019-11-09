@@ -2,31 +2,28 @@
 var express = require('express'); 
 var request = require('request'); 
 var app = express();
+app.use(express.static(__dirname + '/'));
 
-app.get('/app1', function(req, res){ 
-    request('https://localhost:3000', function (error, response, body) { 
-      if (!error && response.statusCode === 200) { 
-        console.log(body); 
-        res.send(body); 
-      } 
-     }); 
+app.get('/', function(req, res){ 
+  //
+  res.sendFile(path.join(__dirname, 'Proxy', 'index.html'));
   });
-  app.get('/app2', function(req, res){ 
-    request('https://localhost:4000', function (error, response, body) { 
-      if (!error && response.statusCode === 200) { 
-        console.log(body); 
-        res.send(body); 
-      } 
-     }); 
-  });
-  app.get('/app3', function(req, res){ 
-    request('https://localhost:5000', function (error, response, body) { 
-      if (!error && response.statusCode === 200) { 
-        console.log(body); 
-        res.send(body); 
-      } 
-     }); 
-  });
+  // app.get('/app2', function(req, res){ 
+  //   request('https://localhost:4000', function (error, response, body) { 
+  //     if (!error && response.statusCode === 200) { 
+  //       console.log(body); 
+  //       res.send(body); 
+  //     } 
+  //    }); 
+  // });
+  // app.get('/app3', function(req, res){ 
+  //   request('https://localhost:5000', function (error, response, body) { 
+  //     if (!error && response.statusCode === 200) { 
+  //       console.log(body); 
+  //       res.send(body); 
+  //     } 
+  //    }); 
+  // });
 
   app.listen(7000); 
 console.log('Server running on port %d', 7000);
