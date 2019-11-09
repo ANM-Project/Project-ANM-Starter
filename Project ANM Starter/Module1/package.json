@@ -6,9 +6,9 @@
   "scripts": {
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon ./Proxy/server.js",
-    "server1": "nodemon ./Module1/server/index.js",
-    "server2": "nodemon ./Module2/server/index.js",
-    "server3": "nodemon ./Module3/server/index.js"
+    "server1": "nodemon ./server/index.js",
+    "server2": "nodemon ./server/index.js",
+    "server3": "nodemon ./server/index.js"
   },
   "author": "ANM",
   "license": "MIT",

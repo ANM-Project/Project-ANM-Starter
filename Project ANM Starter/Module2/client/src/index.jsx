@@ -1,7 +1,11 @@
-class App2 extends Rect.Component{
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class App extends React.Component {
     render(){
-        return(
-            <p>Hello From Module 2</p>
-       ) 
+        return(<div>
+            <h1>Hello from Module2</h1> 
+      </div> ) 
     }
 }
+ReactDOM.render(<App />, document.getElementById("root"))
