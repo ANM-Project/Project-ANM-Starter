@@ -4,10 +4,10 @@ var request = require('request');
 var app = express();
 app.use(express.static(__dirname + '/'));
 
-app.get('/', function(req, res){ 
-  //
-  res.sendFile(path.join(__dirname, 'Proxy', 'index.html'));
-  });
+// app.get('/', function(req, res){ 
+//   //
+//   res.sendFile(path.join(__dirname, 'Proxy', 'index.html'));
+//   });
   // app.get('/app2', function(req, res){ 
   //   request('https://localhost:4000', function (error, response, body) { 
   //     if (!error && response.statusCode === 200) { 
