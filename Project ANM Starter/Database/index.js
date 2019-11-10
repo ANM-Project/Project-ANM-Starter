@@ -1,11 +1,14 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/fetcher');
+const Schema = mongoose.Schema;
 
-let repoSchema = mongoose.Schema({
-  // TODO: your schema here!
-});
+const CommentSchema = Schema({
+  id_Content: {type: Number, unique: true}, //this is a foreign key for the article
+  text: {type: String},
+  likes: {type: Number},  
+})
 
-let Repo = mongoose.model('Repo', repoSchema);
+const Comment = mongoose.model('Comment', CommentSchema);
+
 
 let save = (/* TODO */) => {
   // TODO: Your code here
@@ -13,4 +16,6 @@ let save = (/* TODO */) => {
   // the MongoDB
 }
 
-module.exports.save = save;
+module.exports = {
+  Comment: Comment
+}
