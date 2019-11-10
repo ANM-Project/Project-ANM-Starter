@@ -1,5 +1,15 @@
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/fetcher');
+// const mongoose = require('mongoose');
+
+
+// const URI = require('.././config/keys.js').mongoURI; //path?
+// mongoose.connect(URI, {useNewUrlParser: true});
+
+// var db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'connection error:'));
+// db.once('open', function() {
+//   // we're connected!
+//   console.log("We're Connected!");
+// });
 
 let repoSchema = mongoose.Schema({
   // TODO: your schema here!
