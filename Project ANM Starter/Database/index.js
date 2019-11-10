@@ -1,21 +1,14 @@
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
+const CommentSchema = Schema({
+  id_Content: {type: Number, unique: true}, //this is a foreign key for the article
+  text: {type: String},
+  likes: {type: Number},  
+})
 
-// const URI = require('.././config/keys.js').mongoURI; //path?
-// mongoose.connect(URI, {useNewUrlParser: true});
+const Comment = mongoose.model('Comment', CommentSchema);
 
-// var db = mongoose.connection;
-// db.on('error', console.error.bind(console, 'connection error:'));
-// db.once('open', function() {
-//   // we're connected!
-//   console.log("We're Connected!");
-// });
-
-let repoSchema = mongoose.Schema({
-  // TODO: your schema here!
-});
-
-let Repo = mongoose.model('Repo', repoSchema);
 
 let save = (/* TODO */) => {
   // TODO: Your code here
@@ -23,4 +16,6 @@ let save = (/* TODO */) => {
   // the MongoDB
 }
 
-module.exports.save = save;
+module.exports = {
+  Comment: Comment
+}
