@@ -28,6 +28,8 @@ app.post('/comments', function (req, res) {
   // This route should take the github username provided
   // and get the repo information from the github API, then
   // save the repo information in the database
+  const newComment = Comment({ id_Content: req.body.id_Content, text: req.body.text, likes: req.body.likes})//?
+  newComment.save().then(comment => res.json(comment));
 });
 
 app.get('/comments', function (req, res) {
