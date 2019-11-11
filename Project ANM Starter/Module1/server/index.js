@@ -10,9 +10,6 @@ app.use(express.static(__dirname + '/../client/src/dist'));
 const Content = require('../.././Database/index.js').Content;
 
 
-// app.post('/', function (req, res) {
-// });
-
 app.get('/content', function (req, res) {
   // console.log("contentcour")
   Content.find({}).exec((err,content) => { 
