@@ -1,0 +1,22 @@
+{
+  "name": "project-anm-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noursaqqa/Project-ANM-Starter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noursaqqa/Project-ANM-Starter/issues"
+  },
+  "homepage": "https://github.com/noursaqqa/Project-ANM-Starter#readme",
+  "dependencies": {
+    "mongoose": "^5.7.9"
+  }
+}

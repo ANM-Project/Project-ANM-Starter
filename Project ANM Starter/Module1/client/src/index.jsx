@@ -2,11 +2,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class App extends Rect.Component{
+class App extends React.Component {
     render(){
-        return(
-            <h1>Hellp From Module 222  1</h1> 
-       ) 
+        return(<div>
+            <h1>Hello from Module1</h1> 
+      </div> ) 
     }
 }
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById("content"))
