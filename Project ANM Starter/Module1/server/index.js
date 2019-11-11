@@ -1,5 +1,6 @@
 const express = require('express');
 let app = express();
+const path =require("path")
 
 app.use(express.static(__dirname + '/../client/src/dist'));
 
@@ -15,6 +16,10 @@ app.get('/', function (req, res) {
   // This route should send back the top 25 repos
   res.send('Helo World from server 1');
 });
+
+app.get('*',(req,res)=>{
+  res.sendFile(path.join(__dirname+'/client/build/index.html'))
+})
 
 let port = 3000;
 
