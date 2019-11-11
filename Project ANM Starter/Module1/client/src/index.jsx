@@ -1,4 +1,4 @@
-
+import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 class App extends React.Component {
@@ -12,11 +12,19 @@ class App extends React.Component {
            counter:868,
            author_name:"Amal Al Jarousha",
            date: new Date().toLocaleString(),
-
-
         }
     }
-
+   
+    // getInformation(){
+    //     $.ajax({
+    //         url: "/repos",
+    //         method: "GET",
+    //         data: { username: term },
+    //         datatype: "json"
+    //         // success: function (a){console.log("Done")},
+    //         // error: function (){console.log("Fail")}
+    //       });
+    //    }
 
     render(){
      return(
@@ -38,7 +46,6 @@ class App extends React.Component {
                         </div>									
                     </div>  
                    <img id="img" src="https://cdn.iflscience.com/images/9402f0b2-ea1d-53eb-a72b-38ab70c67f6a/extra_large-1573087146-cover-image.jpg" alt="New Study Challenges One Of Darwin's Major Theories Surrounding The Beginning Of Life On Earth"></img>
-                  
                       <div class="author" >
                           <a href="https://www.iflscience.com/team/madison-dapcevich/" class="image">
                             <img id="author_img"src="https://cdn.iflscience.com/images/2c71dbf8-f2ea-5a37-bd71-073bc362a79b/author_large-author.jpg"/> </a>
