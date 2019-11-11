@@ -25,10 +25,14 @@ app.get("/save",(req,res)=>{
   res.send("saveed")
 })
 
+app.get("*",(req,res)=>{
+  app.use(express.static(__dirname + '/../client/src/dist'));
+})
+
 const port = process.env.PORT || 3000; //this is for heruko ()
 
 // app.listen(process.env.PORT || 3000)
-app.listen(3000, function() {
+app.listen(port, function() {
   console.log(`listening on port ${port}`);
 });
 
