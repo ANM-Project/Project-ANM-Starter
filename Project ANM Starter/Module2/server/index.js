@@ -17,9 +17,9 @@ app.get('/app2', function (req, res) {
   res.send('Helo World from server 2');
 });
 
-let port = 4000;
+const port = process.env.PORT || 4000; //this is for heruko ()
 
+// app.listen(process.env.PORT || 3000)
 app.listen(port, function() {
   console.log(`listening on port ${port}`);
 });
-
