@@ -25,9 +25,9 @@ app.get("/save",(req,res)=>{
   res.send("saveed")
 })
 
-// const port = process.env.PORT || 3000; //this is for heruko ()
+const port = process.env.PORT || 3000; //this is for heruko ()
 
-//app.listen(process.env.PORT || 3000)
+// app.listen(process.env.PORT || 3000)
 app.listen(3000, function() {
   console.log(`listening on port ${port}`);
 });
