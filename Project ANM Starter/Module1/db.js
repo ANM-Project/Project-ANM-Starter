@@ -20,26 +20,30 @@ const CommentSchema = Schema({
 
 const ContentSchema = Schema({
   title: {type: String},
-  text: {type: String},
+  image:{type: String}, 
   description: {type: String},
   Auther: {type: String},
-  ImgAuther: {type: String}, 
-  shares: {type: Number},
-  likes: {type: Number}
+  ImgAuther: {type: String},
+  date:{type:Date},
+  shares: {type: Number}
 })
 
 const Comment = mongoose.model('Comment', CommentSchema);
 const Content = mongoose.model('Content', ContentSchema);
 
+let save = (article) => {  
+    var content = new Content({
+      title: article.title,
+      image:article.image, 
+      description: article.description,
+      Auther: article.Auther,
+      ImgAuther: article.ImgAuther,
+      date:article.date,
+      shares:article.shares
+    })
+    content.save();
+  }
 
-let save = (/* TODO */) => {
-  // TODO: Your code here
-  // This function should save a repo or repos to
-  // the MongoDB
-  var con =new  Content({
-    title:"t"
-  })
-con.save()
-}
 
 module.exports={Comment,save,Content};
+

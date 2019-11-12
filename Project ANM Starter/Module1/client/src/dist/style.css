@@ -1,0 +1,75 @@
+#content{
+    background: white;
+    margin: auto;
+    padding: 0;
+    border: 0;
+    width: 700px;
+
+}
+h1{
+    color: black;
+}
+#img{
+    width: 700px;
+}
+#author_img{
+    float: right;
+}
+
+.author{
+  display: block;
+}
+/* .single .share-widget a.twitter {
+    margin-right: 5px;
+}
+.share-article a.facebook, .share-article a.twitter {
+    width: auto;
+    padding: 0 15px;
+}
+
+.share-widget a.twitter {
+    background: #00aced;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+.share-article a {
+    display: block;
+    float: left;
+    width: 36px;
+    height: 36px;
+    margin: 0 5px 0 0;
+}
+.share-widget a {
+    margin: 0 5px 0 0;
+    color: #fff;
+    text-align: center;
+    height: 38px;
+    width: 38px;
+    text-decoration: none;
+    display: block;
+    float: left;
+}
+a {
+    color: #129bf4;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+} */
+#id_social{
+    height: 40px;
+    width: 200px;
+    float: left;
+    margin: 10px;
+}
+#counter_shares{
+    float: left;
+    margin: 15px;
+    text-decoration: none;
+    font-size:30px;
+    color: dodgerblue;
+
+}
+/* .social{
+   
+    float: left;
+} */
