@@ -14,7 +14,7 @@ app.post('/', function (req, res) {
 app.get('/app2', function (req, res) {
   // TODO - your code here!
   // This route should send back the top 25 repos
-  res.send('Helo World from server 2');
+  // res.send('Helo World from server 2');
 });
 
 const port = process.env.PORT || 4000; //this is for heruko ()
