@@ -8,6 +8,8 @@ class App extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
+            title: "",
+            image: "",
             stories: []
         }
     this.retreiveData();
@@ -15,11 +17,14 @@ class App extends React.Component {
     } 
     
     updateState(data) {
-        this.state = {
+        this.setState ({
             stories: data
-            }
+            }) ;
     }
-
+    componentDidMount(){
+        this.retreiveData();
+    }
+    
     retreiveData() { //it needs a place to retrieve
         var that = this; 
         $.ajax({
@@ -41,7 +46,7 @@ class App extends React.Component {
             <div className= 'widget'>
             <h1 className = "widgetitle">POPULAR STORIES</h1>
             <ul className="postlist" id="popularStories">	
-            <ArticlesList />
+            <ArticlesList stories={this.state.stories}/>
             </ul>
             </div>
         </div>
