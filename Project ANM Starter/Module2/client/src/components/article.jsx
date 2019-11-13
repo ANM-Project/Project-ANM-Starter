@@ -9,9 +9,7 @@ import ReactDom from 'react-dom';
     render(){
       console.log("nour",this.props.story)
       return(
-        <div className= 'widget'>
-        <h1 className = "widgetitle">POPULAR STORIES</h1>
-        <ul className="postlist" id="popularStories">	
+       
             <li className="post space">
                 <a className="imagewrap" >
                 <img src={this.props.story.image}/>
@@ -20,9 +18,6 @@ import ReactDom from 'react-dom';
                 <h4 className="title">{this.props.story.title}</h4>
                 </div>
             </li>
-            
-        </ul>    
-        </div>
       )
     }
   }

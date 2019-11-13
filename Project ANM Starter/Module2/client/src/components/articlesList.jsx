@@ -13,23 +13,26 @@ import Article from './article.jsx'
       // }
     }
     render() {
-      console.log(this.props);
+      // console.log(this.props);
     return(
-      // <h1>Alaaaaa{story.title}</h1>
       <div>                              
-          {this.props.stories.map((story,key)  =>
-               <Article  key={key} story={story} />
-           )}
-           </div>
-      
-)
+         
+      </div>
+      )
     }
   }
 
   export default ArticlesList;
 
   
+  {props.comments.map(comment => {
+    return <div key={comment._id}>{comment.text}</div>
+    } )}
 
+    {this.props.stories.map((story,key)  =>
+      return(<Article  key={key} story={story} />
+      )
+   )
 
 
 

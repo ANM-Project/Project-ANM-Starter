@@ -1,24 +1,30 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import data from '../../dummydata'; 
+// import data from '../../dummydata'; 
 import ArticlesList from './components/articlesList.jsx';
 
 class App extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
-            // isLoading: true,
-            articles: []
+            stories: []
         }
-    this.retreiveData = this.retreiveData.bind(this);
-    }  
+    this.retreiveData();
+    this.updateState = this.updateState.bind(this)
+    } 
+    
+    updateState(data) {
+        this.state = {
+            stories: data
+            }
+    }
 
     retreiveData() { //it needs a place to retrieve
         var that = this; 
         $.ajax({
             type: "GET",
-            url: "/content",
+            url: "/story",
             success: function(data) {
                 that.updateState(data);
                 console.log(data);
@@ -31,15 +37,53 @@ class App extends React.Component {
 
     render() {
         return(
-            <div>
-            <ArticlesList stories={data}/>
+        <div>
+            <div className= 'widget'>
+            <h1 className = "widgetitle">POPULAR STORIES</h1>
+            <ul className="postlist" id="popularStories">	
+            <ArticlesList />
+            </ul>
             </div>
+        </div>
         )
     }
   
 }
 ReactDOM.render(<App />, document.getElementById("side_bar"))
 
+// stories={this.state.stories}
+
+
+
+// this.state = {
+//     // isLoading: true,
+//     articles: []
+// }
+// //this.retreiveData();
+// }  
+
+// updateState(data) {
+//     this.state = {
+//         articles: data
+//     }
+// }
+// retreiveData() { //it needs a place to retrieve
+//     var that = this; 
+//     $.ajax({
+//         type: "GET",
+//         url: "/story",
+//         success: function(data) {
+//             that.updateState(data);
+//             console.log(data);
+//         },
+//         error: function(request, status, error) {
+//             console.log(error);
+//         }
+//     })
+// }
+
+
+/////////
 
             // <div>
             //     {props.articles.map(article => {
