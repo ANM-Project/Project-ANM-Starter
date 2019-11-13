@@ -6,42 +6,18 @@ class App extends React.Component {
         super(props);
         this.state = {
             contents:[]
-        //    title:" ",
-        //    image:"",
-        //    description:"",
-        //    ImgAuther:"",
-        //    shares:0,
-        //    Auther:"",
-        //    date: new Date().toLocaleString(),
-    }
-      //  this.updateState=this.updateState.bind(this);
-    this.reriveData();
     }
 
-    // IncrementItem = () => {
-    //     this.setState({ clicks: this.state.clicks + 1 });
-    //   }
-    //   ToggleClick = () => {
-    //     this.setState({ show: !this.state.show });
-    //   }
+    this.reriveData();
+    this.increamentCounter =this.increamentCounter.bind(this)
+    }
     updateState(data){
         this.setState({
             contents:data
         })               
     }
-    // updateState([title1,image1,description1,ImgAuther1,shares1,Auther1,date1]){
-    //     this.setState({
-    //         title:title1,
-    //         image:image1,
-    //         description:description1,
-    //         ImgAuther:ImgAuther1,
-    //         shares:shares1,
-    //         Auther:Auther1,
-    //         date:date1
-    //    })
-    // }
-
        increamentCounter(id){
+        console.log(`${id} was searched`),
         $.ajax({
             type: "POST",
             url: "/shares",
@@ -58,7 +34,7 @@ class App extends React.Component {
           });
        }
 
-       
+           
       reriveData() {
         console.log("get datat from client");
         var that = this;
@@ -78,39 +54,39 @@ class App extends React.Component {
 
       renderList() {
        // this.reriveData();
-        return this.state.contents.map((content) => {
-            return (   
+       const arr = this.state.contents[0];
+        // return arr.map((content) => {
+         return (   
             <div id="content" className="col-xl-6">
-            <h1 className="title">{content.title}</h1>
+            <h1 className="title">{arr.title}</h1>
             <div className="social-shares">
-                <div className="share-count" id="counter_shares">{content.shares}<span> Shares</span></div>
+                <div className="share-count" id="counter_shares">{arr.shares}<span> Shares</span></div>
                 <div className="share-widget share-article">
                     <div className="social">
                         <a className="facebook" href="#">
-                            <img id="id_social" src="http://www.boldmethod.com/images/social/share-facebook-long-v2.png" onClick={this.increamentCounter(content._id)}/>
+                            <img id="id_social" src="http://www.boldmethod.com/images/social/share-facebook-long-v2.png" onClick={this.increamentCounter(arr._id)}/>
                         </a>
                     </div>
                     <div className="social">
                         <a href="#" className="twitter">
-                        <img id="id_social" src="https://images.squarespace-cdn.com/content/v1/563e2841e4b09a6ae020bd67/1530018807349-YP4LPA0C7INKN2XL0IM2/ke17ZwdGBToddI8pDm48kMJPBCPJsiaclxZdF5CWJnlZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIMrHLJAYcctYfGny_wGpS1LuO2Ox8Cjc1KavDC4kMrXc/button+share+on+twitter.png" onClick={this.increamentCounter(content._id)}/>
+                        <img id="id_social" src="https://images.squarespace-cdn.com/content/v1/563e2841e4b09a6ae020bd67/1530018807349-YP4LPA0C7INKN2XL0IM2/ke17ZwdGBToddI8pDm48kMJPBCPJsiaclxZdF5CWJnlZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIMrHLJAYcctYfGny_wGpS1LuO2Ox8Cjc1KavDC4kMrXc/button+share+on+twitter.png" onClick={this.increamentCounter(arr._id)}/>
                         </a>
                     </div> 
                 </div>									
             </div>  
-           <img id="img" src={content.image}></img>
+           <img id="img" src={arr.image}></img>
               <div className="author" >
                   <a href="https://www.iflscience.com/team/madison-dapcevich/" className="image">
-                    <img id="author_img"src={content.ImgAuther}/> </a>
-                        <h5 className="name">{content.Auther}</h5>
-                        <span className="date">{content.date}</span>
+                    <img id="author_img"src={arr.ImgAuther}/> </a>
+                        <h5 className="name">{arr.Auther}</h5>
+                        <span className="date">{arr.date}</span>
                        </div>      	
                         <div className="article-content">
-                              <p>{content.description}</p>
+                              <p>{arr.description}</p>
                        </div>
                   </div>  
-              )})
+               )
            }
-         
         render(){
             if(this.state.contents.length){
                 return (

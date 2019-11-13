@@ -15,9 +15,10 @@ app.post('/shares', function (req, res) {
     console.log("sucees post increaments shares")
     const id = req.body.user_id;
     // db.Content.update(  { _id:id} , { $set: { 'shares' : shares + 1  } } );
-   Content.update(
+
+   db.Content.update(
       {_id: id},
-      {$inc: {shares: 1}}
+      {$inc: {"shares": 1}}
     );
   }
 )
