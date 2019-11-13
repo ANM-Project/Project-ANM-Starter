@@ -56,14 +56,14 @@ a {
     transition: all .2s ease-in-out;
 } */
 #id_social{
-    height: 50px;
+    height: 40px;
     width: 200px;
     float: left;
     margin: 10px;
 }
 #counter_shares{
     float: left;
-    margin: 20px;
+    margin: 15px;
     text-decoration: none;
     font-size:30px;
     color: dodgerblue;

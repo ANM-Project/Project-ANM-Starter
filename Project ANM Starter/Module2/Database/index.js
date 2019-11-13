@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const URI = require('.././config/keys.js').mongoURI; 
+const URI = require('.././config/keys.js').mongoURI; //path?
 mongoose.connect(URI, {useNewUrlParser: true, useUnifiedTopology: true}); //, useMongoClient: true
 
 var db = mongoose.connection;
@@ -9,7 +9,6 @@ db.once('open', function() {
   // we're connected!
   console.log("We're Connected!");
 });
-
 
 const ContentSchema = Schema({
   title: {type: String},
@@ -26,9 +25,9 @@ const Content = mongoose.model('Content', ContentSchema);
 
 let save = () => {
   var con =new  Content({
-    title:"t"
+    title:"nour"
   })
 con.save()
 }
 
-module.exports={Comment,save,Content};
+module.exports={save,Content};
