@@ -6,10 +6,7 @@ let app = express();
 
 app.use(bodyParser.json()); 
 app.use(express.static(__dirname + '/../client/src/dist'));
-
 const Content = require('../db.js').Content;
-
-
 
 app.post('/shares', function (req, res) {
     console.log("sucees post increaments shares")
@@ -43,7 +40,7 @@ app.get("*",(req,res)=>{
   app.use(express.static(__dirname + '/../client/src/dist'));
 })
 
-const port = process.env.port || 3000; //this is for heruko ()
+const port = process.env.PORT|| 3000; //this is for heruko ()
 
 // app.listen(process.env.PORT || 3000)
 app.listen(port, function() {
