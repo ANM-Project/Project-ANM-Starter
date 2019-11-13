@@ -6,6 +6,7 @@ class App extends React.Component {
         super(props);
         this.state = {
             contents:[]
+            //
     }
 
     this.reriveData();
