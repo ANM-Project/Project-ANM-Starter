@@ -60,9 +60,9 @@
 }
 
 .editor {
-    border: 1px solid #a8abae;
+    /* border: 1px solid #a8abae; */
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
     display: flex;
     
 }
@@ -70,6 +70,7 @@
 .editor-text {
     height: 70px;
     width: 100%;
+    resize: none;
    
 }
 
@@ -80,6 +81,8 @@
     align-items: center;
     align-content: center;
     justify-content: space-between;
+    padding: 10px;
+    margin-top: -5px;
 }
 
 .post-button {
@@ -112,6 +115,7 @@
 
 #area-and-buttons {
     width: 100%;
+    /* border-collapse: collapse; */
 }
 
 .user-image {
@@ -121,4 +125,28 @@
     height:44px;
     width: 44px;
     border-radius: 50%;
+}
+
+.comment-body {
+    /* margin: 5px;
+    padding: 10px; */
+    display: flex;
+    margin: 25px 0px 0px;
+}
+
+.comment-details {
+    margin: 0px 0px 8px;
+    padding: 0px 22px 0px 0px;
+
+}
+
+.comment-actions {
+    margin: 8px 0px 0px;
+}
+
+.break-line {   
+
+    /* border: 1px solid gray;
+    margin: 10px 0px 0px;
+    width: 100%; */
 }
