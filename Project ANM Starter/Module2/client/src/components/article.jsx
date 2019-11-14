@@ -10,12 +10,10 @@ import ReactDom from 'react-dom';
       console.log("nour",this.props.story)
       return(
        
-            <li className="post space">
-                <a className="imagewrap" >
-                <img src={this.props.story.image}/>
-                </a>
+            <li className="postspace"> 
+                <img className="imagewrap" src={this.props.story.image} /> {/*image div*/}
                 <div className="post-content">
-                <h4 className="title">{this.props.story.title}</h4>
+                <h4 className="title">{this.props.story.title}</h4> {/*title div*/}
                 </div>
             </li>
       )

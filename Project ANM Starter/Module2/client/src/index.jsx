@@ -42,19 +42,21 @@ class App extends React.Component {
 
     render() {
         return(
-        <div>
-            <div className= 'widget'>
-            <h1 className = "widgetitle">POPULAR STORIES</h1>
-            <ul className="postlist" id="popularStories">	
-            <ArticlesList stories={this.state.stories}/>
-            </ul>
-            </div>
-        </div>
+          <div className= 'widgetContainerBox'> {/*the container number 1*/}
+            <h1 className = "WidgeTitleBox">POPULAR STORIES</h1> {/*box 2 contains title*/}
+             <div className ="WidgetContentBox"> {/*box 3 contains pixs and titles of the articles*/}
+                <ul className="postlistBox" id="popularStories">	
+                     <ArticlesList stories={this.state.stories}/>
+                </ul>
+             </div>
+          </div>
         )
     }
   
 }
 ReactDOM.render(<App />, document.getElementById("side_bar"))
+
+
 
 // stories={this.state.stories}
 
