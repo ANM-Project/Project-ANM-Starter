@@ -7,6 +7,7 @@
     "start":"node server/index.js",
     "react-dev": "webpack -d --watch",
     "build": "webpack",
+    "server2":"nodemon server/index.js",
     "server-dev": "nodemon ./Proxy/server.js",
     "heroku-postbuild": "webpack -p"
   },

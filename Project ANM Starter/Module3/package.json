@@ -6,9 +6,9 @@
   "scripts": {
     "start": "node server/index.js",
     "server3": "nodemon server/index.js",
-    "dev": "concurrently --kill-others \"npm run react-dev\" \"npm run server1\"",
     "react-dev": "webpack -d --watch",
     "build": "webpack",
+    "server3": "nodemon server/index.js",
     "server-dev": "nodemon ./Proxy/server.js",
     "heroku-postbuild": "webpack -p"
   },
