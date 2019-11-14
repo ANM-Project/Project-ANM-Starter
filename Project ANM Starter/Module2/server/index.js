@@ -10,7 +10,11 @@ app.use(express.static(__dirname + '/../client/src/dist'));
 // const Content = require('../Database/index.js');
 
 app.get('/story', function (req, res) {
-  db.Content.find({}).exec((err,data) => { 
+  db.Content
+        .find({})
+        .limit(5)
+        .sort({shares: -1})
+        .exec((err,data) => { 
       if(err){
         console.log(err);
         req.send()
