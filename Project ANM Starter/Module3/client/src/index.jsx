@@ -43,8 +43,8 @@ class App extends React.Component {
             method: "POST",
             data: { 
                 text: comment, 
-                likes: 5,
-                date: 'November' 
+                likes: 1,
+                date: Date.now 
             },
             dataType: "json",
             success: function() {
@@ -57,7 +57,7 @@ class App extends React.Component {
 
     render(){
         return(<div className="comments-wrap">
-            <h1>Hello from Module3</h1>
+            {/* <h1>Hello from Module3</h1> */}
             {/* <Conversation /> */}
             <AddComment onAdd={this.add.bind(this)} comments={this.state.comments}/> 
             <CommentsList comments={this.state.comments}/>
@@ -65,3 +65,5 @@ class App extends React.Component {
     }
 }
 ReactDOM.render(<App />, document.getElementById("comments"))
+
+//diab

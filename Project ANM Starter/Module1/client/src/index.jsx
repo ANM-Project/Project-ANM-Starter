@@ -58,7 +58,7 @@ class App extends React.Component {
        const arr = this.state.contents[0];
         // return arr.map((content) => {
          return (   
-            <div id="content" className="col-xl-6">
+            <div id="content">
             <h1 className="title">{arr.title}</h1>
             <div className="social-shares">
                 <div className="share-count" id="counter_shares">{arr.shares}<span> Shares</span></div>
@@ -75,7 +75,7 @@ class App extends React.Component {
                     </div> 
                 </div>									
             </div>  
-           <img id="img" src={arr.image}></img>
+            <img id="img" src={arr.image}></img>
               <div className="author" >
                   <a href="https://www.iflscience.com/team/madison-dapcevich/" className="image">
                     <img id="author_img"src={arr.ImgAuther}/> </a>

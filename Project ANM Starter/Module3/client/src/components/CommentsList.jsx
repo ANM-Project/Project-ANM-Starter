@@ -2,7 +2,7 @@ import React from 'react'
 
 const CommentsList = (props) => (
     <div>
-        <h4>Comments List</h4>
+        {/* <h4>Comments List</h4> */}
         <div>
             {props.comments.map(comment => {
             // return <div key={comment._id}>{comment.text}</div>
@@ -26,6 +26,7 @@ const CommentsList = (props) => (
                                 <span><button>Like</button></span>
                                 <span><button>Unlike</button></span>
                             </div>
+                            <hr/>
                             {/* <div className="break-line"></div> */}
                         </div>
                         
