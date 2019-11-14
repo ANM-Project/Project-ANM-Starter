@@ -43,7 +43,7 @@ class App extends React.Component {
     render() {
         return(
           <div className= 'widgetContainerBox'> {/*the container number 1*/}
-            <h1 className = "WidgeTitleBox"> <img id="eye-symbol" src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt="eye-symbol"/> POPULAR STORIES</h1> {/*box 2 contains title*/}
+            <h1 className = "WidgeTitleBox"> <img id="eye-symbol" src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png"/> POPULAR STORIES</h1> {/*box 2 contains title*/}
              <div className ="WidgetContentBox"> {/*box 3 contains pixs and titles of the articles*/}
                 <ul className="postlistBox" id="popularStories">	
                      <ArticlesList stories={this.state.stories}/>

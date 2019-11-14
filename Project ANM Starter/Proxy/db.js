@@ -12,7 +12,7 @@ db.once('open', function() {
 
 
 const CommentSchema = Schema({
-  id_Content: {type: Number, unique: true}, //this is a foreign key for the article
+  // id_Content: {type: Number}, //this is a foreign key for the article
   text: {type: String},
   likes: {type: Number}, 
   date: {type: String}, 
@@ -42,8 +42,16 @@ let save = (article) => {
       shares:article.shares
     })
     content.save();
-  }
+}
 
+let saveComment = (comment) => {
+  var com = new Comment({
+    text: comment.text,
+    likes: comment.likes,
+    date: comment.date //needs to be fixed
+  })
+  com.save()
+}
 
-module.exports={Comment,save,Content};
+module.exports={Comment,save,Content, saveComment};
 

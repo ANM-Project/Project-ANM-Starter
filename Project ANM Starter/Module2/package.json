@@ -8,8 +8,7 @@
     "react-dev": "webpack -d --watch",
     "build": "webpack",
     "server2": "nodemon server/index.js",
-    "heroku-postbuild": "webpack -p",
-    "webserv": "concurrently \"npm run server2\" \"npm run react-dev\""
+    "heroku-postbuild": "webpack -p"
   },
   "author": "ANM",
   "license": "MIT",
