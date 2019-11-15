@@ -8,8 +8,6 @@ const db = require('./db.js')
 const Content = require('./db.js').Content;
 app.use(express.static(__dirname + '/'));
 
-
-//Comments config
 const Comment = require('./db.js').Comment; //require the schema in database
 
 app.get('/comments',  (req, res) => {
@@ -20,6 +18,19 @@ app.get('/comments',  (req, res) => {
     // .catch(err => console.log(err))
 
 });
+
+// app.post('/shares', function (req, res) {
+//   console.log("sucees post increaments shares")
+//   const id = req.body.user_id;
+//   // db.Content.update(  { _id:id} , { $set: { 'shares' : shares + 1  } } );
+
+//  db.Content.update(
+//     {_id: id},
+//     {$inc: {"shares": 1}}
+//   );
+// }
+// )
+
 
 app.post('/comments', (req, res) => {
   const newComment = Comment({
@@ -45,6 +56,20 @@ app.get('/content', function (req, res) {
       res.json(content)});
 });
 
-  app.listen(7000); 
+app.get('/story', function (req, res) {
+  db.Content
+        .find({})
+        .limit(5)
+        .sort({shares: -1})
+        .exec((err,data) => { 
+      if(err){
+        console.log(err);
+        req.send()
+      }
+      res.json(data);
+    })  
+});
+
+  app.listen(process.env.PORT || 7000); 
 console.log('Server running on port %d', 7000);
 

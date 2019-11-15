@@ -54,15 +54,13 @@ class App extends React.Component {
       }
 
       renderList() {
-       // this.reriveData();
+
        const arr = this.state.contents[0];
-        // return arr.map((content) => {
          return (   
-            <div id="content">
-            <h1 className="title">{arr.title}</h1>
+            <div id="content2">
+            <h1>{arr.title}</h1>
             <div className="social-shares">
                 <div className="share-count" id="counter_shares">{arr.shares}<span> Shares</span></div>
-                <div className="share-widget share-article">
                     <div className="social">
                         <a className="facebook" href="#">
                             <img id="id_social" src="http://www.boldmethod.com/images/social/share-facebook-long-v2.png" onClick={this.increamentCounter(arr._id)}/>
@@ -72,13 +70,11 @@ class App extends React.Component {
                         <a href="#" className="twitter">
                         <img id="id_social" src="https://images.squarespace-cdn.com/content/v1/563e2841e4b09a6ae020bd67/1530018807349-YP4LPA0C7INKN2XL0IM2/ke17ZwdGBToddI8pDm48kMJPBCPJsiaclxZdF5CWJnlZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIMrHLJAYcctYfGny_wGpS1LuO2Ox8Cjc1KavDC4kMrXc/button+share+on+twitter.png" onClick={this.increamentCounter(arr._id)}/>
                         </a>
-                    </div> 
                 </div>									
             </div>  
             <img id="img" src={arr.image}></img>
               <div className="author" >
-                  <a href="https://www.iflscience.com/team/madison-dapcevich/" className="image">
-                    <img id="author_img"src={arr.ImgAuther}/> </a>
+                    <img id="author_img"src={arr.ImgAuther}/>
                         <h5 className="name">{arr.Auther}</h5>
                         <span className="date">{arr.date}</span>
                        </div>      	
