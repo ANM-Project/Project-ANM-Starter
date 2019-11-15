@@ -1,42 +1,9 @@
-/* .WidgeTitleBox {
-  background-color: #129bf4;
-  padding: 10px;
-  color: #fff;
-  font-size: 1.3em;
-  width: 250px;
-
-}
-.WidgetContentBox  {
-  display: grid;
-  grid-template-columns: 30% 70%;
-}
-
-.imagewrap {
-  width: 100px;
-  height: 100px;
-  margin: 10px 10px 0 0;
-  max-height: 100%;
-}
-
-.widgetContainerBox { 
-float: right;
-}
-
-.li {
-  display: content;
-  display: flex;
-  padding: 3px;
-  padding-right: 1%;
-} */
-
-
-
 .WidgeTitleBox {
   background-color: #129bf4;
   padding: 10px;
   color: #fff;
   font-size: 1.3em;
-  width: 94.5%;
+  width: 100%;
   margin: 0px;
   /* position: relative; */
 }
@@ -57,7 +24,8 @@ li {
   float: right;
   border: 1px solid #000000;
   margin-right: 30px;
-  width: 23%; 
+  width: 35%; 
+  margin-top: -900px;
 }
 
 
@@ -70,8 +38,8 @@ li {
 
 
 .imagewrap {
-  width: 100px;
-  height: 80px;
+  width: 25%;
+  min-height: 80px;
   float: left;
   margin: 0px 10px 0px 0;
   max-height: 100%;

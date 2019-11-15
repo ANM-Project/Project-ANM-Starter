@@ -72,6 +72,6 @@ app.get('/story', function (req, res) {
     })  
 });
 
-  app.listen(7000); 
+  app.listen(process.env.PORT || 7000); 
 console.log('Server running on port %d', 7000);
 

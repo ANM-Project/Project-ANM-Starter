@@ -57,7 +57,7 @@ class App extends React.Component {
 
        const arr = this.state.contents[0];
          return (   
-            <div id="content">
+            <div id="content2">
             <h1>{arr.title}</h1>
             <div className="social-shares">
                 <div className="share-count" id="counter_shares">{arr.shares}<span> Shares</span></div>
@@ -74,8 +74,7 @@ class App extends React.Component {
             </div>  
             <img id="img" src={arr.image}></img>
               <div className="author" >
-                  <a href="https://www.iflscience.com/team/madison-dapcevich/" className="image">
-                    <img id="author_img"src={arr.ImgAuther}/> </a>
+                    <img id="author_img"src={arr.ImgAuther}/>
                         <h5 className="name">{arr.Auther}</h5>
                         <span className="date">{arr.date}</span>
                        </div>      	
