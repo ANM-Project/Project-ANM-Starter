@@ -8,8 +8,6 @@ const db = require('./db.js')
 const Content = require('./db.js').Content;
 app.use(express.static(__dirname + '/'));
 
-
-//Comments config
 const Comment = require('./db.js').Comment; //require the schema in database
 
 app.get('/comments',  (req, res) => {
