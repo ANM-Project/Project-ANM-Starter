@@ -13,8 +13,8 @@ const CommentsList = (props) => (
                         <div className="comment-content">
                             <div className="comment-details">
                                 <span className="username">Diab</span>
-                                <span className="star-status">* Influencer</span>
-                                <span className="time">14 Nov</span>
+                                <span className="star-status">* Influencer </span>
+                                <span className="time">{comment.date}</span>
                             </div>
                             <div className="comment-text">
                                 <p>{comment.text}</p>
@@ -22,7 +22,7 @@ const CommentsList = (props) => (
                             <div className="comment-actions">
                                 <span><button>Reply</button></span>
                                 <span><button>Share</button></span>
-                                <span><button>(61) Likes</button></span>
+                                <span><button>({comment.likes}) Likes</button></span>
                                 <span><button>Like</button></span>
                                 <span><button>Unlike</button></span>
                             </div>

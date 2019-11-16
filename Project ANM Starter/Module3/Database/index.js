@@ -15,7 +15,7 @@ const CommentSchema = Schema({
   // id_Content: {type: Number}, //this is a foreign key for the article
   text: {type: String},
   likes: {type: Number}, 
-  date: {type: String}, 
+  date: {type: String}
 })
 
 // const ContentSchema = Schema({
@@ -50,6 +50,5 @@ let saveComment = (comment) => {
   })
   com.save()
 }
-
 
 module.exports={Comment, saveComment};

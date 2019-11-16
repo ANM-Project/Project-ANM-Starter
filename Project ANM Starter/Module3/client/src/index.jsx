@@ -40,21 +40,18 @@ class App extends React.Component {
         console.log(`${comment} was added`);
         $.ajax({
             url: "/comments",
-            method: "POST",
+            type: "POST",
             data: { 
                 text: comment, 
                 likes: 1,
-                date: Date.now 
+                date: new Date(Date.now()) 
             },
-            dataType: "json",
+            dataType: "application/json",
             success: function() {
                 that.retrieveData();    
             }
-        })
-        
+        }) 
     }
-
-
     render(){
         return(<div className="comments-wrap">
             {/* <h1>Hello from Module3</h1> */}
